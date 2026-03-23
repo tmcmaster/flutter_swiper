@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Pagination', (WidgetTester tester) async {
-    SwiperController controller = new SwiperController();
-
+    SwiperController controller = SwiperController();
+    PageController pageController = PageController();
     SwiperPluginConfig config = new SwiperPluginConfig(
         activeIndex: 0,
         controller: controller,
+        pageController: pageController,
         itemCount: 10,
         scrollDirection: Axis.horizontal);
 
@@ -41,10 +42,11 @@ void main() {
 
   testWidgets('Pagination vertical', (WidgetTester tester) async {
     SwiperController controller = new SwiperController();
-
+    final pageController = PageController();
     SwiperPluginConfig config = new SwiperPluginConfig(
         activeIndex: 0,
         controller: controller,
+        pageController: pageController,
         itemCount: 10,
         scrollDirection: Axis.vertical);
 
@@ -77,10 +79,11 @@ void main() {
 
   testWidgets('Pagination fraction', (WidgetTester tester) async {
     SwiperController controller = new SwiperController();
-
+    final pageController = PageController();
     SwiperPluginConfig config = new SwiperPluginConfig(
         activeIndex: 0,
         controller: controller,
+        pageController: pageController,
         itemCount: 10,
         scrollDirection: Axis.horizontal);
 
@@ -103,10 +106,11 @@ void main() {
 
   testWidgets('Pagination fraction vertical', (WidgetTester tester) async {
     SwiperController controller = new SwiperController();
-
+    final pageController = PageController();
     SwiperPluginConfig config = new SwiperPluginConfig(
         activeIndex: 0,
         controller: controller,
+        pageController: pageController,
         itemCount: 10,
         scrollDirection: Axis.vertical);
 

@@ -2,8 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-/// plugin to display swiper components
-///
+/// Plugin to display swiper components
 abstract class SwiperPlugin {
   const SwiperPlugin();
 
@@ -21,25 +20,25 @@ class SwiperPluginConfig {
   final SwiperController controller;
   final SwiperLayout layout;
 
-  const SwiperPluginConfig(
-      {this.activeIndex,
-      this.itemCount,
-      this.indicatorLayout,
-      this.outer,
-      this.scrollDirection,
-      this.controller,
-      this.pageController,
-      this.layout,
-      this.loop})
-      : assert(scrollDirection != null),
-        assert(controller != null);
+  const SwiperPluginConfig({
+    required this.activeIndex,
+    required this.itemCount,
+    this.indicatorLayout = PageIndicatorLayout.SLIDE,
+    this.outer = true,
+    required this.scrollDirection,
+    required this.controller,
+    required this.pageController,
+    this.layout = SwiperLayout.TINDER,
+    this.loop = true,
+  });
 }
 
 class SwiperPluginView extends StatelessWidget {
   final SwiperPlugin plugin;
   final SwiperPluginConfig config;
 
-  const SwiperPluginView(this.plugin, this.config);
+  const SwiperPluginView(this.plugin, this.config, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

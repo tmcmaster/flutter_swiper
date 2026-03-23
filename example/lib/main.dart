@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
-
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'src/ExampleCustom.dart';
-import 'src/config.dart';
-import 'src/ExampleSwiperInScrollView.dart';
 
-import 'package:flutter/cupertino.dart';
+import 'src/ExampleCustom.dart';
+import 'src/ExampleSwiperInScrollView.dart';
+import 'src/config.dart';
 
 void main() => runApp(new MyApp());
 
@@ -22,16 +20,22 @@ class MyApp extends StatelessWidget {
       home: new MyHomePage(title: 'Flutter Swiper'),
       //home: buildHome(),
       routes: {
-        '/example01': (BuildContext context) => new ExampleHorizontal(),
-        '/example02': (BuildContext context) => new ExampleVertical(),
-        '/example03': (BuildContext context) => new ExampleFraction(),
-        '/example04': (BuildContext context) => new ExampleCustomPagination(),
-        '/example05': (BuildContext context) => new ExamplePhone(),
-        '/example06': (BuildContext context) => new ScaffoldWidget(
-            child: new ExampleSwiperInScrollView(), title: "ScrollView"),
-        '/example07': (BuildContext context) => new ScaffoldWidget(
-              child: new ExampleCustom(),
-              title: "Custom All",
+        '/example01': (BuildContext context) => ExampleHorizontal(),
+        '/example02': (BuildContext context) => ExampleVertical(),
+        '/example03': (BuildContext context) => ExampleFraction(),
+        '/example04': (BuildContext context) => ExampleCustomPagination(),
+        '/example05': (BuildContext context) => ExamplePhone(),
+        '/example06': (BuildContext context) => Scaffold(
+              body: ExampleSwiperInScrollView(),
+              appBar: AppBar(
+                title: Text('ScrollView'),
+              ),
+            ),
+        '/example07': (BuildContext context) => new Scaffold(
+              body: new ExampleCustom(),
+              appBar: AppBar(
+                title: Text('Custom All'),
+              ),
             )
       },
     );
@@ -39,7 +43,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({
+    super.key,
+    required this.title,
+  });
 
   final String title;
 
@@ -76,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // DateTime moonLanding = DateTime.parse("1969-07-20");
+    // DateTime moonLanding = DateTime.parse('1969-07-20');
 
     return new Scaffold(
       appBar: new AppBar(
@@ -84,13 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new ListView(
         children: render(context, [
-          ["Horizontal", "Scroll Horizontal", "/example01"],
-          ["Vertical", "Scroll Vertical", "/example02"],
-          ["Fraction", "Fraction style", "/example03"],
-          ["Custom Pagination", "Custom Pagination", "/example04"],
-          ["Phone", "Phone view", "/example05"],
-          ["ScrollView ", "In a ScrollView", "/example06"],
-          ["Custom", "Custom all properties", "/example07"]
+          ['Horizontal', 'Scroll Horizontal', '/example01'],
+          ['Vertical', 'Scroll Vertical', '/example02'],
+          ['Fraction', 'Fraction style', '/example03'],
+          ['Custom Pagination', 'Custom Pagination', '/example04'],
+          ['Phone', 'Phone view', '/example05'],
+          ['ScrollView ', 'In a ScrollView', '/example06'],
+          ['Custom', 'Custom all properties', '/example07']
         ]),
       ),
     );
@@ -98,9 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 const List<String> titles = [
-  "Flutter Swiper is awosome",
-  "Really nice",
-  "Yeap"
+  'Flutter Swiper is awosome',
+  'Really nice',
+  'Yeap'
 ];
 
 class ExampleHorizontal extends StatelessWidget {
@@ -108,7 +115,7 @@ class ExampleHorizontal extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: AppBar(
-          title: Text("ExampleHorizontal"),
+          title: Text('ExampleHorizontal'),
         ),
         body: new Swiper(
           itemBuilder: (BuildContext context, int index) {
@@ -117,7 +124,6 @@ class ExampleHorizontal extends StatelessWidget {
               fit: BoxFit.fill,
             );
           },
-
           indicatorLayout: PageIndicatorLayout.COLOR,
           autoplay: true,
           itemCount: images.length,
@@ -132,7 +138,7 @@ class ExampleVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: AppBar(
-          title: Text("ExampleVertical"),
+          title: Text('ExampleVertical'),
         ),
         body: new Swiper(
           itemBuilder: (BuildContext context, int index) {
@@ -155,7 +161,7 @@ class ExampleFraction extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: Text("ExampleFraction"),
+          title: Text('ExampleFraction'),
         ),
         body: new Column(
           children: <Widget>[
@@ -198,7 +204,7 @@ class ExampleCustomPagination extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("Custom Pagination"),
+          title: new Text('Custom Pagination'),
         ),
         body: new Column(
           children: <Widget>[
@@ -220,7 +226,7 @@ class ExampleCustomPagination extends StatelessWidget {
                         child: new Container(
                             color: Colors.white,
                             child: new Text(
-                              "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
+                              '${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}',
                               style: new TextStyle(fontSize: 20.0),
                             )),
                         constraints: new BoxConstraints.expand(height: 50.0),
@@ -247,7 +253,7 @@ class ExampleCustomPagination extends StatelessWidget {
                         child: new Row(
                           children: <Widget>[
                             new Text(
-                              "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
+                              '${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}',
                               style: TextStyle(fontSize: 20.0),
                             ),
                             new Expanded(
@@ -279,14 +285,14 @@ class ExamplePhone extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Phone"),
+        title: new Text('Phone'),
       ),
       body: new Stack(
         children: <Widget>[
           ConstrainedBox(
             constraints: new BoxConstraints.expand(),
             child: new Image.asset(
-              "images/bg.jpeg",
+              'images/bg.jpeg',
               fit: BoxFit.fill,
             ),
           ),
@@ -301,14 +307,14 @@ class ExamplePhone extends StatelessWidget {
                     activeSize: 20.0)),
             children: <Widget>[
               new Image.asset(
-                "images/1.png",
+                'images/1.png',
                 fit: BoxFit.contain,
               ),
               new Image.asset(
-                "images/2.png",
+                'images/2.png',
                 fit: BoxFit.contain,
               ),
-              new Image.asset("images/3.png", fit: BoxFit.contain)
+              new Image.asset('images/3.png', fit: BoxFit.contain)
             ],
           )
         ],
@@ -322,7 +328,11 @@ class ScaffoldWidget extends StatelessWidget {
   final String title;
   final List<Widget> actions;
 
-  ScaffoldWidget({this.child, this.title, this.actions});
+  ScaffoldWidget({
+    required this.child,
+    required this.title,
+    required this.actions,
+  });
 
   @override
   Widget build(BuildContext context) {

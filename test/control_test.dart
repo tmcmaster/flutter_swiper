@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Control horizontal', (WidgetTester tester) async {
     SwiperController controller = new SwiperController();
+    PageController pageController = PageController();
 
     SwiperPluginConfig config = new SwiperPluginConfig(
         activeIndex: 0,
         controller: controller,
+        pageController: pageController,
         itemCount: 10,
         loop: true,
         scrollDirection: Axis.horizontal);
@@ -35,11 +37,13 @@ void main() {
   });
 
   testWidgets('Control vertical', (WidgetTester tester) async {
-    SwiperController controller = new SwiperController();
+    SwiperController swipeController = SwiperController();
+    PageController pageController = PageController();
 
-    SwiperPluginConfig config = new SwiperPluginConfig(
+    SwiperPluginConfig config = SwiperPluginConfig(
         activeIndex: 0,
-        controller: controller,
+        controller: swipeController,
+        pageController: pageController,
         itemCount: 10,
         loop: true,
         scrollDirection: Axis.vertical);

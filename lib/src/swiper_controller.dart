@@ -11,32 +11,32 @@ class SwiperController extends IndexController {
   // Indicate that the user is swiping
   static const int SWIPE = 4;
 
-  // Indicate that the `Swiper` has changed it's index and is building it's ui ,so that the
-  // `SwiperPluginConfig` is available.
+  // Indicate that the `Swiper` has changed its index and is building its UI,
+  // so that the `SwiperPluginConfig` is available.
   static const int BUILD = 5;
 
-  // available when `event` == SwiperController.BUILD
-  SwiperPluginConfig config;
+  // Available when `event` == SwiperController.BUILD
+  SwiperPluginConfig? config;
 
-  // available when `event` == SwiperController.SWIPE
-  // this value is PageViewController.pos
-  double pos;
+  // Available when `event` == SwiperController.SWIPE
+  // This value is PageViewController.pos
+  double? pos;
 
-  int index;
-  bool animation;
-  bool autoplay;
+  int index = 0;
+  bool animation = false;
+  bool autoplay = false;
 
   SwiperController();
 
   void startAutoplay() {
-    event = SwiperController.START_AUTOPLAY;
-    this.autoplay = true;
+    event = START_AUTOPLAY;
+    autoplay = true;
     notifyListeners();
   }
 
   void stopAutoplay() {
-    event = SwiperController.STOP_AUTOPLAY;
-    this.autoplay = false;
+    event = STOP_AUTOPLAY;
+    autoplay = false;
     notifyListeners();
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
 import 'config.dart';
 import 'forms/form_widget.dart';
 
@@ -13,37 +14,22 @@ class ExampleCustom extends StatefulWidget {
 
 class _ExampleCustomState extends State<ExampleCustom> {
   //properties want to custom
-  int _itemCount;
-
-  bool _loop;
-
-  bool _autoplay;
-
-  int _autoplayDely;
-
-  double _padding;
-
-  bool _outer;
-
-  double _radius;
-
-  double _viewportFraction;
-
-  SwiperLayout _layout;
-
-  int _currentIndex;
-
-  double _scale;
-
-  Axis _scrollDirection;
-
-  Curve _curve;
-
-  double _fade;
-
-  bool _autoplayDisableOnInteraction;
-
-  CustomLayoutOption customLayoutOption;
+  late final int _itemCount;
+  late final bool _loop;
+  late final bool _autoplay;
+  late final int _autoplayDely;
+  late final double _padding;
+  late final bool _outer;
+  late final double _radius;
+  late final double _viewportFraction;
+  late final SwiperLayout _layout;
+  late final int _currentIndex;
+  late final double _scale;
+  late final Axis _scrollDirection;
+  late final Curve _curve;
+  late final double _fade;
+  late final bool _autoplayDisableOnInteraction;
+  late final CustomLayoutOption customLayoutOption;
 
   Widget _buildItem(BuildContext context, int index) {
     return ClipRRect(
@@ -132,13 +118,14 @@ class _ExampleCustomState extends State<ExampleCustom> {
       scrollDirection: _scrollDirection,
       indicatorLayout: PageIndicatorLayout.COLOR,
       autoplayDisableOnInteraction: _autoplayDisableOnInteraction,
-      pagination: new SwiperPagination(
-          builder: const DotSwiperPaginationBuilder(
+      pagination: SwiperPagination(
+          builder: DotSwiperPaginationBuilder(
               size: 20.0, activeSize: 20.0, space: 10.0)),
     );
   }
 
-  SwiperController _controller;
+  late final SwiperController _controller;
+
   TextEditingController numberController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -154,13 +141,13 @@ class _ExampleCustomState extends State<ExampleCustom> {
           new Text("Index:$_currentIndex"),
           new Row(
             children: <Widget>[
-              new RaisedButton(
+              new ElevatedButton(
                 onPressed: () {
                   _controller.previous(animation: true);
                 },
                 child: new Text("Prev"),
               ),
-              new RaisedButton(
+              new ElevatedButton(
                 onPressed: () {
                   _controller.next(animation: true);
                 },
@@ -170,7 +157,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
                   child: new TextField(
                 controller: numberController,
               )),
-              new RaisedButton(
+              new ElevatedButton(
                 onPressed: () {
                   var text = numberController.text;
                   setState(() {
@@ -192,7 +179,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
                     SwiperLayout.TINDER,
                     SwiperLayout.CUSTOM
                   ],
-                  valueChanged: (value) {
+                  valueChanged: (SwiperLayout value) {
                     _layout = value;
                     setState(() {});
                   })),
@@ -325,7 +312,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
                     Curves.bounceIn,
                     Curves.fastOutSlowIn
                   ],
-                  valueChanged: (value) {
+                  valueChanged: (Curve value) {
                     _curve = value;
                     setState(() {});
                   })),

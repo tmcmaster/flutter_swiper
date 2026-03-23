@@ -8,15 +8,23 @@ dependencies:
   flutter:
     sdk: flutter
 
-  transformer_page_view: ^0.1.6
-  flutter_page_indicator: ^0.0.3
+  transformer_page_view:
+    git:
+      url: git@github.com:tmcmaster/transformer_page_view.git
+  flutter_page_indicator:
+    git:
+      url: git@github.com:tmcmaster/flutter_page_indicator.git
 
 environment:
-  sdk: ">=2.0.0-dev.48.0 <3.0.0"
-  flutter: ">=0.1.4 <3.0.0"
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: '>=3.29.2'
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter:
+dependency_overrides:
+  flutter_page_indicator:
+    path: ../flutter_page_indicator
+  transformer_page_view:
+    path: ../transformer_page_view

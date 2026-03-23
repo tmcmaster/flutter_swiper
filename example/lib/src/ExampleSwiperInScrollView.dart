@@ -10,11 +10,11 @@ class ExampleSwiperInScrollView extends StatefulWidget {
 
 class _ExampleState extends State<ExampleSwiperInScrollView>
     with TickerProviderStateMixin {
-  AnimationController controller;
-  Animation<double> _animation10;
-  Animation<double> _animation11;
-  Animation<double> _animation12;
-  Animation<double> _animation13;
+  late final AnimationController controller;
+  late final Animation<double> _animation10;
+  late final Animation<double> _animation11;
+  late final Animation<double> _animation12;
+  late final Animation<double> _animation13;
 
   _ExampleState();
 
@@ -127,8 +127,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                    scale:0.8,
-                    fade:0.8,
+                    scale: 0.8,
+                    fade: 0.8,
                     itemBuilder: (c, i) {
                       return Container(
                         color: Colors.grey,
@@ -142,8 +142,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                      scale:0.8,
-                      fade:0.8,
+                      scale: 0.8,
+                      fade: 0.8,
                       itemBuilder: (c, i) {
                         return Container(
                           color: Colors.grey,
@@ -157,8 +157,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                      scale:0.8,
-                      fade:0.8,
+                      scale: 0.8,
+                      fade: 0.8,
                       itemBuilder: (c, i) {
                         return Container(
                           color: Colors.grey,
@@ -173,8 +173,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: Swiper(
                       outer: true,
-                      scale:0.8,
-                      fade:0.8,
+                      scale: 0.8,
+                      fade: 0.8,
                       itemBuilder: (c, i) {
                         return new Container(
                           color: Colors.grey,
@@ -199,8 +199,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: new Swiper(
                       outer: true,
-                      scale:0.8,
-                      fade:0.8,
+                      scale: 0.8,
+                      fade: 0.8,
                       itemBuilder: (c, i) {
                         return new Card(
                           elevation: 2.0,
@@ -254,7 +254,7 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: new Swiper(
                       outer: true,
-                      fade:0.8,
+                      fade: 0.8,
                       viewportFraction: 0.8,
                       scale: 0.8,
                       itemBuilder: (c, i) {

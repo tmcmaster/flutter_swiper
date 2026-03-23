@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('STACK', (WidgetTester tester) async {
@@ -55,8 +55,7 @@ void main() {
   });
 
   testWidgets('CUSTOM', (WidgetTester tester) async {
-    CustomLayoutOption customLayoutOption;
-    customLayoutOption = new CustomLayoutOption(startIndex: -1, stateCount: 3)
+    final customLayoutOption = CustomLayoutOption(startIndex: -1, stateCount: 3)
         .addRotate([-45.0 / 180, 0.0, 45.0 / 180]).addTranslate([
       new Offset(-370.0, -40.0),
       new Offset(0.0, 0.0),
