@@ -9,31 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c786231b-ff91-4235-b541-261fe51b92a1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/example/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/InnerSwiper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/InnerSwiper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/listener_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/listener_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/src/ExampleCustom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/src/ExampleCustom.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/src/ExampleSwiperInScrollView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/src/ExampleSwiperInScrollView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/src/forms/form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/src/forms/form_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/custom_layout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/custom_layout.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/swiper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/swiper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/swiper_control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/swiper_control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/swiper_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/swiper_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/swiper_pagination.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/swiper_pagination.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/swiper_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/swiper_plugin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/control_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/control_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/layout_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/layout_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pagination_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/pagination_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="c786231b-ff91-4235-b541-261fe51b92a1" name="Default" comment="checkpoint" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -356,6 +332,15 @@
       <workItem from="1749014541911" duration="597000" />
       <workItem from="1749017493466" duration="4851000" />
     </task>
+    <task id="LOCAL-00001" summary="checkpoint">
+      <option name="closed" value="true" />
+      <created>1774285844631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774285844631</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -435,6 +420,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="checkpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
